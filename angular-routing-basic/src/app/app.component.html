@@ -1,13 +1,15 @@
-<main>
-  <div style="text-align:center">
+<div class="app-container">
+  <header>
     <h1>
       Routing Application
     </h1>
-  </div>
+  </header>
   <nav>
     <!--  two directives for anchor navigation routerLink and routerLinkActive -->
     <a class="button" routerLink="/departments" routerLinkActive="active">Departments</a>
     <a class="button" routerLink="/employees" routerLinkActive="active">Employees</a>
   </nav>
-  <router-outlet></router-outlet>
-</main>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>

@@ -24,8 +24,10 @@ body {
   background-color: #fff;
 }
 
-main {
-  padding: 40px;
+main, nav, header {
+  margin: 10px;
+  padding: 10px;
+  border: 1px dashed #ccc;
 }
 
 .button {
