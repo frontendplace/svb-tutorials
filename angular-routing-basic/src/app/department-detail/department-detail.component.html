@@ -1,18 +1,20 @@
-<h3>You selected department with id = {{departmentId}}</h3>
-<p>
-<!--  <button class="button" (click)="showOverview()" routerLinkActive="active">Overview</button>-->
-<!--  <button class="button" (click)="showContact()" routerLinkActive="active">Contact</button>  -->
-  <a class="button" routerLink="./overview" routerLinkActive="active">Overview</a>
-  <a class="button" routerLink="./contact" routerLinkActive="active">Contact</a>
-</p>
-
-<router-outlet></router-outlet>
-
-<p>
-  <button class="button" (click)="goPrevious()">Previous</button>
-  <button class="button" (click)="goNext()">Next</button>
-</p>
-
-<div>
-  <button class="button" (click)="gotoDepartments()">Back</button>
-</div>
+<section class="department-detail">
+  <h3>You selected department with id = {{departmentId}}</h3>
+  <nav>
+    <!--  <button class="button" (click)="showOverview()" routerLinkActive="active">Overview</button>-->
+    <!--  <button class="button" (click)="showContact()" routerLinkActive="active">Contact</button>  -->
+    <a class="button" routerLink="./overview" routerLinkActive="active">Overview</a>
+    <a class="button" routerLink="./contact" routerLinkActive="active">Contact</a>
+  </nav>
+  
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  
+  <nav>
+    <button class="button" (click)="goPrevious()">Previous</button>
+    <button class="button" (click)="goNext()">Next</button>
+    <button class="button" (click)="gotoDepartments()">Back</button>
+  </nav>
+ 
+</section>
