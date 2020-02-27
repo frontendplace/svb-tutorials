@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { departments } from '../data/departments';
 
 @Component({
   selector: 'app-department-detail',
@@ -7,8 +8,8 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
   styleUrls: ['./department-detail.component.scss']
 })
 export class DepartmentDetailComponent implements OnInit {
-
   public departmentId;
+
   constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
@@ -19,12 +20,12 @@ export class DepartmentDetailComponent implements OnInit {
   }
 
   goPrevious() {
-    let previousId = this.departmentId - 1;
+    let previousId = Math.max(this.departmentId - 1,0);
     this.router.navigate(['/departments', previousId]);
   }
 
   goNext() {
-    let nextId = this.departmentId + 1;
+    let nextId = Math.min(this.departmentId + 1, departments.length-1);
     this.router.navigate(['/departments', nextId]);
   }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { departments } from '../data/departments';
 
 @Component({
   selector: 'app-department-list',
@@ -8,13 +9,7 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 })
 export class DepartmentListComponent implements OnInit {
   public selectedId;
-  departments = [
-    {id: 1, name: 'Angular'},
-    {id: 2, name: 'Node'},
-    {id: 3, name: 'MongoDB'},
-    {id: 4, name: 'Ruby'},
-    {id: 5, name: 'Bootstrap'}
-  ];
+  public departments = departments;
 
   constructor(private router: Router, private route: ActivatedRoute) { }
 
